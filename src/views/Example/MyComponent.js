@@ -30,12 +30,17 @@ class MyComponent extends React.Component {
         })
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        console.log('>> run didupdate: ', 'prev state: ', prevState, 'current state: ', this.state)
+    }
+    componentDidMount() {
+        console.log('>>> run component did mount')
+    }
+
     /*
     JSX => return block
     fragment
     */
-
-
 
     render() {
         console.log('>>> call render: ', this.state)
